@@ -1,66 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talento Tech Ecommerce</title>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <title>Mi Tienda - Pre-entrega Front-End</title>
+    <!-- Enlace a tu archivo CSS externo -->
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-    <header class="header">
-            <a href="index.html">
-                <img src="img/logo1.png" alt="Logo de la tienda">
-            </a>
-            <div>
-                <ul class="navbar">
-                    <li>
-                        <a href="">Home</a>
-                    </li>
-                    <li>
-                        <a href="">Tienda</a>
-                    </li>
-                    <li>
-                        <a href="">Blog</a>
-                    </li>
-                    <li>
-                        <a href="https://www.google.com">Acerca de</a>
-                    </li>
-                    <li>
-                        <a href="pages/contacto.html">Contacto</a>
-                    </li>
-                    <li>
-                        <a href="">Carrito</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="mobile">
-                <a href="pages/carrito.html">
-                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                </a>
-                <i id="bar" class="fas fa-outdent"></i>
-            </div>
+    <!-- HEADER Y NAVEGACIÓN -->
+    <header>
+        <div class="logo-container">
+            <img src="img/logo1.png" alt="Logo de la tienda online">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#resenas">Reseñas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
+    <!-- CONTENIDO PRINCIPAL -->
     <main>
-        <!-- ==================== HERO ==================== -->
-        <section class="hero">
-            <div class="hero-content">
-                <h4>¡Hacé el cambio que necesitás!</h4>
-                <h2>Súper ofertas</h2>
-                <h1>En todos los productos</h1>
-                <p>¡Aprovechá cupones y descuentos de hasta el 70%!</p>
-                <button>Comprar</button>
+        
+        <!-- Sección de Inicio / Hero -->
+        <section id="inicio" class="hero-section">
+            <h1>¡Hacé el cambio que necesitás!</h1>
+            <p>Aprovechá cupones y descuentos de hasta el 70% en todos nuestros productos.</p>
+            <a href="#productos" class="btn-comprar">Comprar</a>
+        </section>
+
+        <!-- Sección de Productos (Para Flexbox) -->
+        <section id="productos" class="productos-section">
+            <h2>Nuestros Productos</h2>
+            <div class="productos-container">
+                <article class="card">
+                    <img src="img/hero4.jpg" alt="Producto destacado 1">
+                    <h3>Producto 1</h3>
+                    <p>Descripción breve del producto increíble.</p>
+                    <span>$15.000</span>
+                </article>
+                <article class="card">
+                    <img src="img/hero4.jpg" alt="Producto destacado 2">
+                    <h3>Producto 2</h3>
+                    <p>Descripción breve del producto increíble.</p>
+                    <span>$22.000</span>
+                </article>
+                <article class="card">
+                    <img src="img/hero4.jpg" alt="Producto destacado 3">
+                    <h3>Producto 3</h3>
+                    <p>Descripción breve del producto increíble.</p>
+                    <span>$30.000</span>
+                </article>
             </div>
         </section>
-    </main>
-    
-    
-    
-    
-</body>
 
+        <!-- Sección de Reseñas (Para Grid) -->
+        <section id="resenas" class="resenas-section">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <div class="resenas-grid">
+                <div class="resena-card">
+                    <p>"Excelente atención y los productos llegaron súper rápido. Súper recomendable."</p>
+                    <span>- María Gómez</span>
+                </div>
+                <div class="resena-card">
+                    <p>"La calidad superó completamente mis expectativas. Volveré a comprar sin duda."</p>
+                    <span>- Carlos Pérez</span>
+                </div>
+                <div class="resena-card">
+                    <p>"Muy buena relación precio-calidad. ¡Gracias por el asesoramiento!"</p>
+                    <span>- Lucía Fernández</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto y Formulario (Formspree) -->
+        <section id="contacto" class="contacto-section">
+            <h2>Contacto</h2>
+            <p>¡Completa los datos y nos comunicaremos para resolver todas tus dudas!</p>
+            
+            <!-- Reemplaza el link de action por tu endpoint de Formspree cuando lo crees -->
+            <form action="https://formspree.io/f/tu-codigo-aqui" method="POST" class="form-contacto">
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu consulta..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">¡Enviar!</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2026 - Mi Tienda Front-End. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
 </html>
