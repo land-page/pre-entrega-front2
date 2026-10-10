@@ -1,5 +1,5 @@
 /* ============================================================
-   ESTILOS GENERALES Y TIPOGRAFÍA (Google Fonts)
+   ESTILOS GENERALES Y TIPOGRAFÍA
 ============================================================ */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 
@@ -23,7 +23,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    padding: 15px 40px;
     background-color: #ffffff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     position: sticky;
@@ -32,22 +32,20 @@ header {
 }
 
 .logo-container img {
-    height: 40px;
+    height: 35px;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-}
-
-nav ul li {
-    margin-left: 25px;
+    gap: 20px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: 600;
+    font-size: 0.95rem;
     transition: color 0.3s;
 }
 
@@ -56,36 +54,37 @@ nav ul li a:hover {
 }
 
 /* ============================================================
-   SECCIÓN HERO (Background y Presentación)
+   SECCIÓN HERO (Ajustada para que no sea gigante)
 ============================================================ */
 .hero-section {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/hero4.jpg');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/hero4.jpg');
     background-size: cover;
-    background-position: center;
-    height: 80vh;
+    background-position: center top;
+    min-height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: #fff;
-    padding: 0 20px;
+    padding: 40px 20px;
 }
 
 .hero-section h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
 .hero-section p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 20px;
+    max-width: 600px;
 }
 
 .btn-comprar {
     background-color: #088178;
     color: white;
-    padding: 12px 30px;
+    padding: 10px 25px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: 600;
@@ -97,31 +96,33 @@ nav ul li a:hover {
 }
 
 /* ============================================================
-   SECCIÓN DE PRODUCTOS (Uso de Flexbox)
+   SECCIÓN DE PRODUCTOS (Flexbox)
 ============================================================ */
 .productos-section {
-    padding: 60px 50px;
+    padding: 50px 20px;
     text-align: center;
 }
 
 .productos-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
+    font-size: 2rem;
+    margin-bottom: 30px;
 }
 
 .productos-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .card {
     background: #ffffff;
     border: 1px solid #e2e2e2;
     border-radius: 8px;
-    width: 280px;
-    padding: 20px;
+    width: 260px;
+    padding: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.03);
     text-align: left;
     display: flex;
@@ -131,54 +132,54 @@ nav ul li a:hover {
 
 .card img {
     width: 100%;
-    height: 180px;
+    height: 160px;
     object-fit: cover;
     border-radius: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .card h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 5px;
 }
 
 .card p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #666;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .card span {
     font-weight: 700;
     color: #088178;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 /* ============================================================
-   SECCIÓN DE RESEÑAS (Uso de CSS Grid)
+   SECCIÓN DE RESEÑAS (CSS Grid)
 ============================================================ */
 .resenas-section {
-    padding: 60px 50px;
+    padding: 50px 20px;
     background-color: #f1f3f6;
     text-align: center;
 }
 
 .resenas-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
+    font-size: 2rem;
+    margin-bottom: 30px;
 }
 
 .resenas-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    max-width: 1100px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 .resena-card {
     background: white;
-    padding: 25px;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     text-align: left;
@@ -187,34 +188,41 @@ nav ul li a:hover {
 .resena-card p {
     font-style: italic;
     color: #555;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
 }
 
 .resena-card span {
     font-weight: 600;
     color: #222;
+    font-size: 0.9rem;
 }
 
 /* ============================================================
    SECCIÓN DE CONTACTO Y FORMULARIO
 ============================================================ */
 .contacto-section {
-    padding: 60px 50px;
+    padding: 50px 20px;
     text-align: center;
-    max-width: 600px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
 .contacto-section h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 10px;
+}
+
+.contacto-section > p {
+    font-size: 0.95rem;
+    color: #666;
 }
 
 .form-contacto {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-top: 30px;
+    gap: 12px;
+    margin-top: 25px;
     text-align: left;
 }
 
@@ -225,20 +233,21 @@ nav ul li a:hover {
 
 .campo label {
     font-weight: 600;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
+    font-size: 0.9rem;
 }
 
 .campo input, .campo textarea {
-    padding: 12px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 .btn-enviar {
     background-color: #088178;
     color: white;
-    padding: 12px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
@@ -258,27 +267,7 @@ footer {
     background-color: #222;
     color: white;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-
-/* ============================================================
-   MEDIA QUERIES (Diseño Responsivo)
-============================================================ */
-@media (max-width: 768px) {
-    header {
-        padding: 15px 20px;
-    }
-
-    nav ul {
-        display: none; /* Podrías adaptarlo si implementas menú hamburguesa más adelante */
-    }
-
-    .hero-section h1 {
-        font-size: 2.2rem;
-    }
-
-    .productos-section, .resenas-section, .contacto-section {
-        padding: 40px 20px;
-    }
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 0.9rem;
 }
